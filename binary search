@@ -1,0 +1,28 @@
+#include<stdio.h>
+#include<conio.h>
+void main()
+{
+    int a[50],start,end,mid,target,n;
+    printf("how many elements you want in array");
+    scanf("%d",&n);
+    printf("enter the array elements");
+    for(i=0;i<n;i++)
+    scanf("%d",&a[i]);
+    printf("enter the sequencial elements");
+    scanf("%d",&target);
+    start=0;
+    end=n-1;
+    mid=(start+end)/2;
+    while(target!=a[mid]&&start<=end)
+    {
+        if(target>a[mid])
+        start=mid+1;
+        else
+        end=mid-1;
+        mid=(start+end)/2;
+    }
+    if(target==a[mid])
+    printf("element found at position %d",mid+1);
+    if(start>end)
+    printf("elements is not found";
+    })
